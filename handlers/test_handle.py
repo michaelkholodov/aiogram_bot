@@ -72,7 +72,7 @@ async def weather(message: types.Message):
 @test_router.message()
 async def process_weather(message: types.Message):
     city = message.text
-    api_key = 'a8c0556856e69f039959bbda4588b830'
+    api_key = '***********************'
     res = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric')
     data = res.json()
     if data['cod'] == 200:
